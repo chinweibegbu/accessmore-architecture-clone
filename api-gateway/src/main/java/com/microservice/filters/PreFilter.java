@@ -3,7 +3,9 @@ package com.microservice.filters;
 import javax.servlet.http.HttpServletRequest;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PreFilter extends ZuulFilter {
 
   @Override

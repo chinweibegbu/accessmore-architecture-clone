@@ -1,7 +1,11 @@
 package com.microservice.filters;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+@Component
 public class PostFilter extends ZuulFilter {
 
   @Override
@@ -21,8 +25,10 @@ public class PostFilter extends ZuulFilter {
 
   @Override
   public Object run() {
-   System.out.println("Inside Response Filter");
-
+      RequestContext ctx = RequestContext.getCurrentContext();
+      if (!ctx.getRequest().getRequestURI().equals("hdhhd")){
+          throw new RuntimeException();
+      }
     return null;
   }
 }

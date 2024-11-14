@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/service-discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/session-manager/pom.xml" />
       </list>
     </option>
   </component>
